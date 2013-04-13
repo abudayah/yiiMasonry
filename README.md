@@ -1,7 +1,7 @@
-Yii Masonry Style v1.0beta [Extinction]
+Yii Masonry Style v1.0beta [Extensions]
 ==========
 
-Yii Masonry Style with infinty scrolling extinction.
+Yii Masonry Style with infinty scrolling extensions.
 
 
 Usage

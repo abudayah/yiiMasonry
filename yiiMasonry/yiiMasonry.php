@@ -1,17 +1,17 @@
 <?php
 
 class yiiMasonry extends CLinkPager {
-
+	
     public $listViewId;
-    public $rowSelector = '.row';
-    public $itemsSelector = '.items';
+    public $rowSelector = '.view';
+    public $itemsSelector;
     public $nextSelector = '.next:not(.hidden) a';
     public $pagerSelector = '.pager';
     private $baseUrl;
     public $options = array();
 
-    public function init() {
-
+    public function init(){
+	
         parent::init();
 
         $assets = dirname(__FILE__) . '/assets';
@@ -22,9 +22,11 @@ class yiiMasonry extends CLinkPager {
         $cs->registerCSSFile($this->baseUrl . '/css/jquery.ias.css');
         $cs->registerScriptFile($this->baseUrl . '/js/jquery-ias.js', CClientScript::POS_END);
         $cs->registerScriptFile($this->baseUrl . '/js/jquery.masonry.min.js', CClientScript::POS_END);
-
+		Yii::app()->clientScript->registerScript('onloadscript', " $('#{$this->listViewId}').masonry({itemSelector: '{$this->rowSelector}'});", CClientScript::POS_END);
         return;
     }
+	
+	
 
     public function run() {
 		
@@ -39,30 +41,28 @@ class yiiMasonry extends CLinkPager {
 						'item' => $this->rowSelector,
 						'pagination' => '#' . $this->listViewId . ' ' . $this->pagerSelector,
 						'next' => '#' . $this->listViewId . ' ' . $this->nextSelector,
-						'loader' => "",
+						'loader' => "Loading..",
 					));
         $js = "jQuery.ias({\n";
 		foreach ( $options as $k => $v ) {
 			$js .= $k . ":'" . $v . "',\n";
 		}
 		$js .= "
-			onLoadItems: function(items) {
+			onLoadItems: function(items){
 				// hide new items while they are loading
 				var newElems = $(items).show().css({ opacity: 0 });
 				// ensure that images load before adding to masonry layout
 				newElems.imagesLoaded(function(){
-				  // show elems now they're ready
-				  newElems.animate({ opacity: 1 });
-				  $('{$this->itemsSelector}').masonry( 'appended', newElems, true );
+					// show elems now they're ready
+					newElems.animate({ opacity: 1 });
+					$('#{$this->listViewId}').masonry( 'appended', newElems, true );
 				});
 				return true;
 			}\n";
         $js .= "});";
 
-
         $cs = Yii::app()->clientScript;
         $cs->registerScript('infscrl', $js, CClientScript::POS_READY);
-
 
         $buttons = $this->createPageButtons();
 

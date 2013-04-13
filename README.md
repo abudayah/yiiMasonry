@@ -23,6 +23,6 @@ Just copy this code for your index page.
     )
     ));
     
-Demo
+Example
 ----
 - http://ae.cineklik.com/collections/

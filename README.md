@@ -1,7 +1,7 @@
-Yii Masonry Style v1.0beta [ Yii Extensions ]
+Yii Masonry Style v1.0beta [ Yii Extension ]
 ==========
 
-Yii Masonry Style with infinty scrolling extensions.
+Yii Masonry Style with infinty scrolling extension.
 
 
 Usage

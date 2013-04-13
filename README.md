@@ -1,7 +1,7 @@
 Yii Masonry Style v1.0beta [ Yii Extension ]
 ==========
 
-Yii Masonry Style with infinty scrolling extension.
+Masonry Style with infinty scrolling extension for Yii framework.
 
 
 Usage

@@ -1,4 +1,4 @@
-Yii Masonry Style v1.0 [Extintion]
+Yii Masonry Style v1.0beta [Extintion]
 ==========
 
 Yii Masonry Style with infinty scrolling extintion.

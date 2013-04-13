@@ -23,6 +23,7 @@ Just copy this code for your index page.
     )
     ));
     
-Example
+Ex: Websites used Yii Masonry Style
 ----
 - http://ae.cineklik.com/collections/
+- http://www.olgot.com/v/426

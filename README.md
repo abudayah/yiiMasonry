@@ -27,7 +27,7 @@ Just copy this code for your index page.
     )
     ));
     
-> jquery required.
+> jquery is required.
     
 Ex: Websites used Yii Masonry Style
 ----

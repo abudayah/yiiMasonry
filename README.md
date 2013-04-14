@@ -23,7 +23,6 @@ Just copy this code for your index page.
       'class' => 'ext.yiiMasonry.yiiMasonry', 
       'rowSelector'=>'.view', // row class
       'listViewId' => 'postsIndex', // Container id
-      'header' => '',
     )
     ));
     

@@ -5,7 +5,7 @@ Masonry Style with infinty scrolling extension for Yii framework.
 
 Features
 ------
-- infinty scrolling.
+- infinity scrolling.
 - Default theme.
 
 Usage

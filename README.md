@@ -10,8 +10,8 @@ Features
 
 Usage
 ------
-
-Just copy this code for your index page.
+- Extract files to > protected/extensions/yiiMasonry
+- Copy this code for your index page.
 
     $this->widget('zii.widgets.CListView', array(
     'id' => 'postsIndex',
@@ -25,8 +25,6 @@ Just copy this code for your index page.
       'listViewId' => 'postsIndex', // Container id
     )
     ));
-    
-> jquery is required.
     
 Ex: Websites used Yii Masonry Style
 ----

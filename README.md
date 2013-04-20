@@ -10,7 +10,7 @@ Features
 
 Usage
 ------
-- Extract files to > protected/extensions/yiiMasonry
+- Extract files extensions to be like this path > protected/extensions/yiiMasonry/yiiMasonry.php
 - Copy this code for your index page.
 
         $this->widget('zii.widgets.CListView', array(
